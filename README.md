@@ -10,6 +10,8 @@ Die Guestbook-Applikation wird von Fleet automatisch auf den beiden Clustern ama
 - Auf amazon-001 (env=dev) werden keine Redis Follower eingespielt
 - Auf rancher-001 (env=prod) wird das Frontend Deployment auf 3 Replicas hochskaliert, und es wird ein Ingress eingespielt, über den die Applikation von außen aufgerufen werden kann: http://guestbook.backstage-demo-itzbund.de/
 
+<img width="984" height="545" alt="image" src="https://github.com/user-attachments/assets/950a04f3-e7a6-4fb7-9a22-b2b9637cc7b3" />
+
 Das Deployment erzeugt ein Bundle, in dem alle zu der Applikation gehörenden Ressourcen über die beiden Cluster hinweg verwaltet werden können:
 
 <img width="985" height="758" alt="image" src="https://github.com/user-attachments/assets/12e72d37-a470-4246-b1a3-7f8b90f7df4a" />
