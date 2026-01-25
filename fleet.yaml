@@ -1,13 +1,13 @@
 namespace: itzbund-rancher-fleet
-# targetCustomizations:
-# - name: dev
-#   clusterSelector:
-#     matchLabels:
-#       env: dev
-#   yaml:
-#     overlays:
-#     # Refers to overlays/noreplication folder
-#     - noreplication
+targetCustomizations:
+- name: dev
+  clusterSelector:
+    matchLabels:
+      env: dev
+  yaml:
+    overlays:
+    # Refers to overlays/noreplication folder
+    - noreplication
 
 # - name: test
 #   clusterSelector:
