@@ -23,7 +23,7 @@ targetCustomizations:
     matchLabels:
       env: prod
   yaml:
-    # Refers to overlays/servicelb, scale3 folders
+    # Refers to overlays/ingress, scale3 folders
     overlays:
-    - servicelb
+    - ingress
     - scale3
