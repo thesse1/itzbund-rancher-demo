@@ -15,8 +15,8 @@ targetCustomizations:
       env: test
   yaml:
     overlays:
-    # Refers to overlays/scale3 folder
-    - scale3
+    # Refers to overlays/scale2 folder
+    - scale2
 
 - name: prod
   clusterSelector:
