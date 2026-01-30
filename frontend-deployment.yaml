@@ -9,6 +9,11 @@ spec:
     matchLabels:
         app: guestbook
         tier: frontend
+  strategy:
+    rollingUpdate:
+      maxSurge: 35%
+      maxUnavailable: 35%
+    type: RollingUpdate
   template:
     metadata:
       labels:
