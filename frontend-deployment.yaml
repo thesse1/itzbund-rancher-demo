@@ -23,7 +23,7 @@ spec:
           value: "dns"
         resources:
           requests:
-            cpu: 100m
+            cpu: 80m
             memory: 100Mi
         ports:
         - containerPort: 80
