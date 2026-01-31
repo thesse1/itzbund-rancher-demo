@@ -15,17 +15,17 @@ targetCustomizations:
       env: test
   yaml:
     overlays:
-    # Refers to overlays/scale2, sts folders
+    # Refers to overlays/scale2, sts-ebs folders
     - scale2
-    - sts
+    - sts-ebs
 
 - name: prod
   clusterSelector:
     matchLabels:
       env: prod
   yaml:
-    # Refers to overlays/ingress, scale3, sts folders
+    # Refers to overlays/ingress, scale3, sts-longhorn folders
     overlays:
     - ingress
     - scale3
-    - sts
+    - sts-longhorn
