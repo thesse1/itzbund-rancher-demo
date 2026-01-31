@@ -1,4 +1,4 @@
-namespace: itzbund-rancher-fleet
+defaultNamespace: itzbund-rancher-fleet
 targetCustomizations:
 - name: dev
   clusterSelector:
