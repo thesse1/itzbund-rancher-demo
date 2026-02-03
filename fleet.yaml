@@ -29,3 +29,4 @@ targetCustomizations:
     - ingress
     - scale3
     - sts-longhorn
+    - longhorn

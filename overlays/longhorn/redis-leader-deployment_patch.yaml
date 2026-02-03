@@ -1,0 +1,12 @@
+spec:
+  template:
+    spec:
+      containers:
+      - name: leader
+        volumeMounts:
+        - name: redis-data
+          mountPath: /data
+      volumes:
+        - name: redis-data
+          persistentVolumeClaim:
+            claimName: redis-data-pvc
