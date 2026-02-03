@@ -6,7 +6,6 @@ targetCustomizations:
       env: dev
   yaml:
     overlays:
-    # Refers to overlays/noreplication folder
     - noreplication
 
 - name: test
@@ -15,18 +14,16 @@ targetCustomizations:
       env: test
   yaml:
     overlays:
-    # Refers to overlays/scale2, sts-ebs folders
+    - ingress
     - scale2
-    - sts-ebs
+    - persistence
 
 - name: prod
   clusterSelector:
     matchLabels:
       env: prod
   yaml:
-    # Refers to overlays/ingress, scale3, sts-longhorn folders
     overlays:
     - ingress
     - scale3
-    - sts-longhorn
-    - longhorn
+    - persistence

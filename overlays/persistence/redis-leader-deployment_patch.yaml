@@ -3,6 +3,11 @@ spec:
     spec:
       containers:
       - name: leader
+        args:
+        - redis-server
+        - '--save'
+        - '60'
+        - '1'
         volumeMounts:
         - name: redis-data
           mountPath: /data
