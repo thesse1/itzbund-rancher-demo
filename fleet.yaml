@@ -16,7 +16,7 @@ targetCustomizations:
     overlays:
     - ingress
     - scale2
-#    - persistence
+    - persistence
 
 - name: prod
   clusterSelector:
@@ -26,4 +26,4 @@ targetCustomizations:
     overlays:
     - ingress
     - scale3
-#    - persistence
+    - persistence
