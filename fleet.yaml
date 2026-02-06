@@ -14,7 +14,6 @@ targetCustomizations:
       env: test
   yaml:
     overlays:
-    - ingress
     - scale2
     - persistence
 
