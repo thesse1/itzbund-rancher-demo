@@ -16,6 +16,7 @@ targetCustomizations:
     overlays:
     - scale2
     - persistence
+    - loadbalancer
 
 - name: prod
   clusterSelector:
