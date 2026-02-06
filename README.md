@@ -15,19 +15,17 @@ In Rancher werden sechs Kubernetes-Cluster verwaltet:
 -	ein von Rancher auf von Rancher erstellten EC2-Instanzen erstellter RKE2-Cluster (rancher-002)
 
 Persistenz:
-- Auf eks-001 und eks-002 wurde der Out of tree EBS CSI Driver aktiviert und eine entsprechende Storage Class ebs (als Default Storage Class) angelegt.
+- Auf eks-001 und eks-002 wurde der Out of tree EBS CSI Driver eingespielt und eine entsprechende Storage Class ebs (als Default Storage Class) angelegt.
 - Auf rancher-001 und rancher-002 wurde Longhorn installiert. Dabei wurde automatisch eine entsprechende Storage Class longhorn (als Default Storage Class) angelegt.
-
-Netzwerk:
-- Auf eks-001 und eks-002 wurde der NGINX Ingress Controller eingespielt.
 
 Die Guestbook-Applikation wird von Fleet automatisch auf den fünf Clustern azure-001 (env=dev), eks-001 und eks-002 (env=test) und rancher-001 und rancher-002 (env=prod) eingespielt. Dabei werden die Ressourcen automatisch angepasst:
 - Auf azure-001 (env=dev) werden keine Redis Follower eingespielt
 - Auf eks-001 und eks-002 (env=test) wird das Frontend Deployment auf 2 Replicas hochskaliert
 - Auf rancher-001 und rancher-002 (env=prod) wird das Frontend Deployment auf 3 Replicas hochskaliert
-- Auf eks-001 und eks-002 (env=test) und auf rancher-001 und rancher-002 (env=prod) wird ein Ingress eingespielt, über den die Applikation von außen aufgerufen werden kann (DNS-Einträge in AWS Route 53):
-  - http://guestbook.eks-001.backstage-demo-itzbund.de/ - Zugriff über einen AWS Load Balancer
-  - http://guestbook.eks-002.backstage-demo-itzbund.de/ - Zugriff über einen AWS Load Balancer
+- Auf eks-001 und eks-002 (env=test) wird der Typ des Frontend Services zu LoadBalancer geändert, so dass automatisch ein AWS Load Balancer eingerichtet wird, über den die Applikation von außen aufgerufen werden kann (DNS-Einträge in AWS Route 53):
+  - http://guestbook.eks-001.backstage-demo-itzbund.de/
+  - http://guestbook.eks-002.backstage-demo-itzbund.de/
+- Auf rancher-001 und rancher-002 (env=prod) wird ein Ingress eingespielt, über den die Applikation von außen aufgerufen werden kann (DNS-Einträge in AWS Route 53):
   - http://guestbook.rancher-001.backstage-demo-itzbund.de/
   - http://guestbook.rancher-002.backstage-demo-itzbund.de/
 - Auf eks-001 und eks-002 (env=test) und auf rancher-001 und rancher-002 (env=prod) wird das Redis Leader Deployment so geändert, dass der Redis-Server alle 60 Sekunden (bei Änderungen) den Datenbestand in den Ordner /data schreibt. Bei dem Ordner handelt es sich um ein gemountetes Volume, welches über ein Persistent Volume Claim in der Default Storage Class angelegt wird.
