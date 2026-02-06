@@ -5,8 +5,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-#  - host: '*.backstage-demo-itzbund.de'
-  - http:
+  - host: '*.backstage-demo-itzbund.de'
+    http:
       paths:
       - path: /
         pathType: Prefix
