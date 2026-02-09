@@ -32,7 +32,7 @@ Die Guestbook-Applikation wird von Fleet automatisch auf den fünf Clustern azur
   - Auf eks-001 und eks-002 (Storage Class ebs) wird automatisch ein AWS Elastic Block Store (EBS) Volume angelegt.
   - Auf rancher-001 und rancher-002 (Storage Class longhorn) wird automatisch in Longhorn ein Volume angelegt.
 
-<img width="984" height="545" alt="image" src="https://github.com/user-attachments/assets/950a04f3-e7a6-4fb7-9a22-b2b9637cc7b3" />
+<img width="1039" height="544" alt="image" src="https://github.com/user-attachments/assets/1717cf37-eb41-4afa-9012-efdc28100a76" />
 
 Das Deployment erzeugt ein Bundle, in dem alle zu der Applikation gehörenden Ressourcen über die beiden Cluster hinweg verwaltet werden können:
 
