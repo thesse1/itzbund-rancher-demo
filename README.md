@@ -36,6 +36,7 @@ Die Guestbook-Applikation wird von Fleet automatisch auf den fünf Clustern azur
 
 Das Deployment erzeugt ein Bundle, in dem alle zu der Applikation gehörenden Ressourcen über die beiden Cluster hinweg verwaltet werden können:
 
-<img width="985" height="758" alt="image" src="https://github.com/user-attachments/assets/12e72d37-a470-4246-b1a3-7f8b90f7df4a" />
+<img width="1189" height="1031" alt="image" src="https://github.com/user-attachments/assets/65eeb31b-4dbb-48df-9505-b924af0af7c6" />
+<img width="1199" height="711" alt="image" src="https://github.com/user-attachments/assets/a19bb125-b3d0-4500-8dd4-cf3cd40f8a2c" />
 
 Wenn man in diesem Repo im Branch main eine Änderung vornimmt, wird diese automatisch auf den betroffenen Clustern eingespielt.
