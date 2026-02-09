@@ -4,7 +4,7 @@ Demo für die Verwendung von [Fleet](https://fleet.rancher.io/) in Rancher: http
 
 Dieses Repository basiert auf dem [Kubernetes Guestbook Beispiel](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) und wird als "Git Repo" in Rancher importiert, siehe https://rancher.backstage-demo-itzbund.de/dashboard/c/_/fleet/fleet.cattle.io.gitrepo:
 
-<img width="1076" height="243" alt="image" src="https://github.com/user-attachments/assets/ac5a0c86-3264-495d-b03b-65aba6d2d49e" />
+<img width="1029" height="227" alt="image" src="https://github.com/user-attachments/assets/06b3dc59-0d7a-405d-9aaf-3941d6c5e38a" />
 
 In Rancher werden sechs Kubernetes-Cluster verwaltet:
 -	der lokale Cluster für den Rancher-Server selbst (K3s-Cluster, der auf einer EC2-Instanz ausgeführt wird)
